@@ -1,0 +1,235 @@
+.banner_box {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  align-items: flex-start;
+  grid-gap: 4vw;
+  @media only screen and (max-width: 1024px) {
+    grid-gap: 2vw;
+  }
+  .avBox {
+    position: relative;
+    display: flex;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .c_ {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: grid;
+      grid-gap: 0.8rem;
+      z-index: 10;
+      padding: 1rem;
+      @media only screen and (max-width: 1024px) {
+        grid-gap: 0.5rem;
+        padding: 0.7rem;
+      }
+    }
+    .c_name {
+      font-size: 1.5vw;
+      font-weight: 500;
+      line-height: 1;
+      @media only screen and (max-width: 1024px) {
+        font-size: 2vw;
+      }
+    }
+    .c_tag {
+      font-size: 1.1vw;
+      font-weight: 100;
+      letter-spacing: 1px;
+      line-height: 1;
+      @media only screen and (max-width: 1024px) {
+        font-size: 1.3vw;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #3d4451 100%);
+    }
+  }
+
+  .title_ {
+    font-size: 2.1vw;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 1024px) {
+      font-size: 2.8vw;
+    }
+    span {
+      padding-inline-end: 1rem;
+    }
+    i {
+      font-style: normal;
+      display: inline-block;
+      margin-inline-start: 0.5rem;
+      font-size: 12px;
+      font-weight: 600;
+
+      padding: 0.1rem 0.5rem;
+      line-height: 1.2;
+      border-radius: 6px;
+
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        transform: skewX(-10deg);
+        z-index: -1;
+      }
+    }
+    .tag_ {
+      color: #374151;
+      &::before {
+        background: #4caf50;
+      }
+    }
+    .hire {
+      color: #fff;
+
+      &::before {
+        background: #2196f3;
+      }
+    }
+  }
+}
+
+.text_box {
+  p {
+    font-size: 1.1vw;
+    line-height: 1.8;
+    @media only screen and (max-width: 1024px) {
+      font-size: 1.5vw;
+    }
+  }
+}
+
+.more_wrap {
+  margin-top: 2.5rem;
+
+  .link_ {
+    padding: 0.6rem 1.5rem;
+    border: 1px solid #fff;
+    font-size: 1vw;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+    @media only screen and (max-width: 1024px) {
+      font-size: 1.2vw;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #2a2e37;
+      z-index: -1;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover {
+      &::before {
+        transform-origin: bottom;
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+.metaBox {
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  .mBox {
+    // border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 4px 5px 7px #373e48;
+    .t_ {
+      font-size: 1.2vw;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+      color: #939393;
+      font-weight: 500;
+    }
+    .v_ {
+      font-size: 1.4vw;
+      line-height: 1.2;
+      a {
+        color: #3596c5;
+      }
+    }
+  }
+}
+
+.pageSection {
+  padding-top: 10vh;
+}
+
+.publicGrid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  .p_item {
+    padding: 0.5rem;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 3rem;
+    align-items: center;
+    box-shadow: 4px 5px 7px #383e48;
+    border-radius: 10px;
+    .t_ {
+      font-size: 1.2vw;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+      color: #939393;
+      font-weight: 500;
+    }
+    .v_ {
+      font-size: 2vw;
+      line-height: 1.2;
+      font-weight: 600;
+      a {
+        color: #3596c5;
+      }
+    }
+    .icon_ {
+      color: #b5b5b5;
+    }
+  }
+}
+
+.repoWrap {
+}
+
+.section-title {
+  font-size: 2.5vw;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.reposList {
+  margin-top: 1.5rem;
+}
